@@ -1,0 +1,31 @@
+{
+  "name": "tfnsw",
+  "version": "0.0.0",
+  "private": true,
+  "description": "A simple Node and React app to display realtime TfNSW data",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarkusAndersons/tfnsw.git"
+  },
+  "author": "Markus Andersons <markus.andersons@gmail.com> (https://github.com/MarkusAndersons)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/MarkusAndersons/tfnsw/issues"
+  },
+  "homepage": "https://github.com/MarkusAndersons/tfnsw#readme",
+  "scripts": {
+    "start": "node index.js",
+    "build": "cd frontend && npm run build && cd .. && rm -rf ./dist/* && mv ./frontend/build/* ./dist/",
+    "front": "cd frontend && npm run start",
+    "dev": "concurrently \"npm run start\" \"npm run front\""
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "morgan": "~1.9.0"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.1"
+  }
+}
